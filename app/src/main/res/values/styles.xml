@@ -17,7 +17,23 @@
         <item name="stSolidBackground">true</item>
         <item name="stStrokeWidth">3dp</item>
         <item name="stStrokeColor">@color/colorPrimary</item>
-        <item name="stIconStart">@drawable/ic_action_x</item>
+        <item name="stIconStart">@drawable/ic_action_error</item>
+
+        <item name="stLength">LONG</item>
+
+        <item name="stRadius">4dp</item>
+    </style>
+
+    <style name="custom_toast_good">
+
+        <item name="stTextColor">#fff</item>
+        <item name="stFont">@font/rubik_bold</item>
+        <item name="stTextSize">14sp</item>
+        <item name="stColorBackground">@color/colorPrimary</item>
+        <item name="stSolidBackground">true</item>
+        <item name="stStrokeWidth">3dp</item>
+        <item name="stStrokeColor">@color/colorAccent</item>
+        <item name="stIconStart">@drawable/ic_action_success</item>
 
         <item name="stLength">LONG</item>
 
