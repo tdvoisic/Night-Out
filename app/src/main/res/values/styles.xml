@@ -1,10 +1,34 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowAnimationStyle">@style/PageSlideAnimation</item>
+    </style>
+
+    <style name="custom_toast_bad">
+
+        <item name="stTextColor">#fff</item>
+        <item name="stFont">@font/rubik_bold</item>
+        <item name="stTextSize">14sp</item>
+        <item name="stColorBackground">@color/colorAccent</item>
+        <item name="stSolidBackground">true</item>
+        <item name="stStrokeWidth">3dp</item>
+        <item name="stStrokeColor">@color/colorPrimary</item>
+        <item name="stIconStart">@drawable/ic_action_x</item>
+
+        <item name="stLength">LONG</item>
+
+        <item name="stRadius">4dp</item>
+    </style>
+
+    <style name="PageSlideAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/from_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/leave_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/from_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/leave_right</item>
     </style>
 
 </resources>

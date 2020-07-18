@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "536604484025",
+    "firebase_url": "https://night-out-4e993.firebaseio.com",
+    "project_id": "night-out-4e993",
+    "storage_bucket": "night-out-4e993.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536604484025:android:ac776e442f5cbc88da1668",
+        "android_client_info": {
+          "package_name": "com.example.night_out"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "536604484025-7e76njv1c1db5j1mpfht89pmqrg90kmd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.night_out",
+            "certificate_hash": "53c292fe2d931a3e4786f976cd7f17a9152d9bcf"
+          }
+        },
+        {
+          "client_id": "536604484025-fg3ng5g4pf40dkcee2hjruljlgrghgb0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjZUg9zG3gHF3X8vXFM3a7QqbTUB-wzn0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "536604484025-fg3ng5g4pf40dkcee2hjruljlgrghgb0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

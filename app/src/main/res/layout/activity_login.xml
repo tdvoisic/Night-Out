@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@drawable/purp_grade_background">
+
+    <ImageView
+        android:id="@+id/login_star_1"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/shooting_stars"/>
+    <ImageView
+        android:id="@+id/login_star_2"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/shooting_stars"/>
+
+
+    <ImageView
+        android:id="@+id/login_star_3"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/shooting_stars"/>
+
+    <TextView
+        android:id="@+id/login_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/login_star_2"
+        android:text="Night Out"
+        android:textColor="@android:color/white"
+        android:textAlignment="center"
+        android:textSize="45sp"
+        android:fontFamily="@font/damion"/>
+
+    <EditText
+        android:id="@+id/login_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_title"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/input_field"
+        android:drawableLeft="@drawable/ic_action_full_email"
+        android:fontFamily="@font/rubik"
+        android:hint="Email..."
+        android:padding="12dp"
+        android:paddingLeft="2dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_email"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/input_field"
+        android:drawableLeft="@drawable/ic_action_lock"
+        android:fontFamily="@font/rubik"
+        android:hint="Password..."
+        android:padding="12dp"
+        android:paddingLeft="2dp"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_password"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/rubik_black"
+        android:text="Login"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/login_register_account_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_button"
+        android:layout_marginTop="10dp"
+        android:text="Don't have an account?"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="18sp"
+        android:fontFamily="@font/rubik"/>
+    <TextView
+        android:id="@+id/login_other_ways"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_register_account_link"
+        android:text="Or login with"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/rubik"/>
+
+    <TextView
+        android:id="@+id/login_forget_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Forget Password?"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:layout_marginBottom="4dp"/>
+
+
+
+
+
+</RelativeLayout>
