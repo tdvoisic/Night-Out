@@ -4,17 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".ProfileActivity"
     android:background="@drawable/purp_grade_background">
 
-    <Button
-        android:id="@+id/logout_temp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="logout"/>
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/main_bottom_nav"
+        android:id="@+id/profile_bottom_nav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/purp_grade_background"
