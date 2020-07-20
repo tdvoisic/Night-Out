@@ -16,5 +16,11 @@
         app:itemIconTint="@drawable/nav_selected"
         app:menu="@menu/menu_navigation"
         android:layout_alignParentBottom="true"/>
+    <Button
+        android:id="@+id/logout_temp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Temp logout"
+        android:layout_below="@+id/main_page_toolbar"/>
 
 </RelativeLayout>

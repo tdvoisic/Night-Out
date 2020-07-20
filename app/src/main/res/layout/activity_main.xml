@@ -6,12 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:background="@drawable/purp_grade_background">
+    <include
+        android:id="@+id/main_page_toolbar"
+        layout="@layout/app_bar_layout">
 
-    <Button
-        android:id="@+id/logout_temp"
+    </include>
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="logout"/>
+        android:layout_marginTop="6dp"
+        android:text="Night Out"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:fontFamily="@font/damion" />
+    <ImageButton
+        android:id="@+id/main_add_new_post_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_baseline_post_add"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="4dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/purp_grade_background"
+        android:baselineAlignBottom="false"
+        android:focusableInTouchMode="false"/>
+
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/main_bottom_nav"
@@ -22,5 +44,6 @@
         app:itemIconTint="@drawable/nav_selected"
         app:menu="@menu/menu_navigation"
         android:layout_alignParentBottom="true"/>
+
 
 </RelativeLayout>

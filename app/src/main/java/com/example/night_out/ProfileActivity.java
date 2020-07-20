@@ -6,17 +6,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class ProfileActivity extends AppCompatActivity {
 
     private BottomNavigationView Nav;
+    private Button LogOutTemp;
+    private FirebaseAuth UserAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        UserAuth = FirebaseAuth.getInstance();
 
         Nav = findViewById(R.id.profile_bottom_nav);
         Nav.setSelectedItemId(R.id.nav_profile);
@@ -26,6 +33,18 @@ public class ProfileActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 UserMenuSelector(menuItem);
                 return false;
+            }
+        });
+        LogOutTemp = (Button) findViewById(R.id.logout_temp);
+
+        LogOutTemp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UserAuth.signOut();
+                Intent loginIntent = new Intent(ProfileActivity.this, LoginActivity.class);
+                loginIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(loginIntent);
+                finish();
             }
         });
     }
