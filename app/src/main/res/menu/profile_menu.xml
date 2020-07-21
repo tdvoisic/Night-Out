@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_profile_edit"
+            android:title="Edit Profile"
+            android:icon="@drawable/ic_baseline_edit"/>
+        <item
+            android:id="@+id/menu_profile_checked_locations"
+            android:title="Locations Visited"
+            android:icon="@drawable/ic_baseline_location"/>
+        <item
+            android:id="@+id/menu_profile_find_friends"
+            android:title="Find Friends"
+            android:icon="@drawable/ic_baseline_find_friends"/>
+        <item
+            android:id="@+id/menu_posts_liked"
+            android:title="Posts Liked"
+            android:icon="@drawable/ic_baseline_post_liked"/>
+        <item
+            android:id="@+id/menu_profile_settings"
+            android:title="Settings"
+            android:icon="@drawable/ic_baseline_settings"/>
+        <item
+            android:id="@+id/menu_profile_logout"
+            android:title="Logout"
+            android:icon="@drawable/ic_baseline_exit"/>
+    </group>
+
+</menu>

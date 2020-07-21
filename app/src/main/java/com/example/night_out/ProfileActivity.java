@@ -8,22 +8,44 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ProfileActivity extends AppCompatActivity {
 
     private BottomNavigationView Nav;
     private Button LogOutTemp;
     private FirebaseAuth UserAuth;
+    private DatabaseReference UsersRef;
+
+    private TextView Username, Friends, Posts, FullName, UserBio;
+    private CircleImageView ProfileImage;
+    private String currentUserID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+        Username = findViewById(R.id.profile_top_username);
+        ProfileImage = findViewById(R.id.profile_user_image);
+        UserBio = findViewById(R.id.profile_user_bio);
+        FullName = findViewById(R.id.profile_fullname);
+
         UserAuth = FirebaseAuth.getInstance();
+
+        currentUserID = UserAuth.getCurrentUser().getUid();
+        UsersRef = FirebaseDatabase.getInstance().getReference().child("Users").child(currentUserID);
 
         Nav = findViewById(R.id.profile_bottom_nav);
         Nav.setSelectedItemId(R.id.nav_profile);
@@ -45,6 +67,27 @@ public class ProfileActivity extends AppCompatActivity {
                 loginIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(loginIntent);
                 finish();
+            }
+        });
+
+        UsersRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()){
+                    String username = dataSnapshot.child("username").getValue().toString();
+                    String userImage = dataSnapshot.child("profileimage").getValue().toString();
+                    String bio = dataSnapshot.child("bio").getValue().toString();
+                    String fullname = dataSnapshot.child("fullname").getValue().toString();
+                    Username.setText(username);
+                    FullName.setText(fullname);
+                    UserBio.setText(bio);
+                    Picasso.get().load(userImage).into(ProfileImage);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
             }
         });
     }

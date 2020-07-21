@@ -6,6 +6,125 @@
     android:layout_height="match_parent"
     tools:context=".ProfileActivity"
     android:background="@drawable/purp_grade_background">
+    <include
+        android:id="@+id/profile_layout_bar"
+        layout="@layout/app_bar_layout">
+
+    </include>
+    <TextView
+        android:id="@+id/profile_top_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Username"
+        android:textColor="@android:color/white"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:fontFamily="@font/rubik"/>
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/profile_settings_button"-->
+<!--        android:layout_width="35dp"-->
+<!--        android:layout_height="35dp"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:src="@drawable/ic_baseline_settings"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:layout_marginBottom="4dp"-->
+<!--        android:layout_marginRight="12dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:background="@drawable/purp_grade_background"-->
+<!--        android:baselineAlignBottom="false"-->
+<!--        android:focusableInTouchMode="false"-->
+<!--        />-->
+
+
+    
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_user_image"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_baseline_account"
+            android:scaleType="centerCrop"
+            android:layout_below="@+id/profile_layout_bar"
+            android:layout_marginRight="120dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="4dp"/>
+    <TextView
+        android:id="@+id/profile_fullname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_user_image"
+        android:layout_marginLeft="108dp"
+        android:layout_marginRight="108dp"
+        android:layout_marginTop="2dp"
+        android:textAlignment="center"
+        android:text="Timothy Voisich"
+        android:textSize="10sp"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/rubik_bold"/>
+
+    <TextView
+        android:id="@+id/profile_friends_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_layout_bar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="260dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/button_purp"
+        android:fontFamily="@font/rubik_bold"
+        android:text="Posts"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:textColor="@android:color/white" />
+    <TextView
+        android:id="@+id/profile_posts_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_layout_bar"
+        android:layout_marginRight="260dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="50dp"
+        android:text="Friends"
+        android:fontFamily="@font/rubik_bold"
+        android:textAlignment="center"
+        android:background="@drawable/button_purp"
+        android:padding="10dp"
+        android:textColor="@android:color/white"/>
+    <TextView
+        android:id="@+id/profile_user_bio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_fullname"
+        android:text="This is Bio"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="13sp"
+        android:fontFamily="@font/rubik"/>
+    <View
+        android:id="@+id/profile_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/profile_user_bio"
+        android:background="@color/colorPrimaryDark"/>
+        
+
+
+     
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/my_posts_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/profile_line"
+        android:layout_marginTop="4dp"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/profile_bottom_nav"
@@ -21,6 +140,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Temp logout"
-        android:layout_below="@+id/main_page_toolbar"/>
+        android:layout_above="@+id/profile_bottom_nav"/>
 
 </RelativeLayout>
