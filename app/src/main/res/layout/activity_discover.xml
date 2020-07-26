@@ -5,7 +5,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DiscoverActivity"
-    android:background="@drawable/purp_grade_background">
+    android:background="@color/colorPrimaryDark">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@+id/discover_bottom_nav">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/discover_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/reverse_purp_background"
+            app:tabTextColor="@android:color/white">
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/discover_locations_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Locations" />
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/discover_people_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Accounts"/>
+
+        </com.google.android.material.tabs.TabLayout>
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/discover_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.viewpager.widget.ViewPager>
+    </LinearLayout>
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/discover_bottom_nav"
