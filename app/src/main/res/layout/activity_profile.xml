@@ -127,7 +127,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:menu="@menu/profile_menu"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorMid"
         app:itemTextColor="@android:color/white"
         app:itemIconTint="@android:color/white">
 

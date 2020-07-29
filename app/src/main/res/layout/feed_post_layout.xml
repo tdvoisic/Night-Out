@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/post_border">
+    android:background="@drawable/post_border"
+    android:layout_marginBottom="5dp">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -68,8 +69,9 @@
         <ImageView
             android:id="@+id/post_image"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="3dp"
+            android:layout_height="280dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter" />
         <LinearLayout
@@ -122,9 +124,9 @@
                 android:layout_height="30dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="8dp"
-                android:src="@drawable/ic_action_flag"
+                android:src="@drawable/ic_baseline_like_empty"
                 android:scaleType="fitCenter"
-                android:background="@drawable/button_purp"/>
+                android:background="@color/colorMid"/>
 
             <TextView
                 android:id="@+id/display_number_of_likes"
@@ -141,11 +143,11 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginTop="7dp"
-                android:src="@drawable/ic_baseline_messages"
+                android:src="@drawable/ic_baseline_add_comment"
                 android:layout_marginLeft="160dp"
                 android:baselineAlignBottom="false"
                 android:scaleType="fitCenter"
-                android:background="@drawable/button_purp"/>
+                android:background="@color/colorMid"/>
 
         </LinearLayout>
 
